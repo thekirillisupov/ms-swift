@@ -409,6 +409,24 @@ register_dataset(
         preprocess_func=MTEBRerankPreprocessor(),
         tags=['rerank', '🔥']))
 
+register_dataset(
+    DatasetMeta(
+        ms_dataset_id='/home/jovyan/isupov/reranker/data/universal_retrieval/list_wise_samples_v1_2_07_25',
+        hf_dataset_id='/home/jovyan/isupov/reranker/data/universal_retrieval/list_wise_samples_v1_2_07_25',
+        split=['train'],
+        preprocess_func=MTEBRerankPreprocessor(),
+        tags=['rerank', '🔥']))
+
+register_dataset(
+    DatasetMeta(
+        ms_dataset_id='/home/jovyan/isupov/reranker/data/universal_retrieval/list_wise_samples_v3_5_08_25',
+        hf_dataset_id='/home/jovyan/isupov/reranker/data/universal_retrieval/list_wise_samples_v3_5_08_25',
+        dataset_path='/home/jovyan/isupov/reranker/data/universal_retrieval/list_wise_samples_v3_5_08_25.json',
+        dataset_name='list_wise_samples_v3_5_08_25',
+        split=['train'],
+        preprocess_func=MTEBRerankPreprocessor(),
+        tags=['rerank', '🔥']))
+
 
 def _repair_conversations_agent_instruct(s: str) -> List[Dict[str, Any]]:
     s = s.replace('}\n {', '},\n {')

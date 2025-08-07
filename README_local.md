@@ -1,5 +1,5 @@
 1. Add local file for sft
- - add to llm.py 
+ - add to swift/llm/dataset/dataset/llm.py 
  Successfully registered `/home/jovyan/isupov/ms-swift/swift/llm/dataset/data/dataset_info.json`.
  ```python
 register_dataset(

@@ -15,3 +15,11 @@ register_dataset(
 
 2. Example of Lora sft 
  - scripts/train_generative_reranker_listwise_lora.sh
+
+3. How to change prompt
+ms-swift/swift/llm/template/constant.py 
+LLMTemplateType.qwen3_reranker = 'qwen3_reranker'
+
+register template in swift/llm/template/template/qwen.py as CustomQwen3RerankerTemplate
+after add --template parameter in swift/llm/template/constant.py
+

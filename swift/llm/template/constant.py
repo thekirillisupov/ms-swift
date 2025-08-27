@@ -15,6 +15,7 @@ class LLMTemplateType:
     qwen3 = 'qwen3'
     qwen3_emb = 'qwen3_emb'
     qwen3_reranker = 'qwen3_reranker'
+    custom_qwen3_reranker = 'custom_qwen3_reranker'
     qwq_preview = 'qwq_preview'
     qwq = 'qwq'
     marco_o1 = 'marco_o1'

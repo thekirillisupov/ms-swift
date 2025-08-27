@@ -84,6 +84,24 @@ register_template(
         response_prefix='<think>\n\n</think>\n\n',
         template_cls=Qwen3RerankerTemplate))
 
+
+class CustomQwen3RerankerTemplate(Template):
+    instruction = 'Given a idp search query, retrieve relevant passages that answer the query'
+
+    def _preprocess_inputs(self, inputs: StdTemplateInputs) -> None:
+        super()._preprocess_inputs(inputs)
+        query = inputs.messages[-2]['content']
+        user_message = '<Instruct>: ' + self.instruction + '\n' + '<Query>: ' + query + '\n' + '<Document>: {doc}'
+        inputs.messages[-2]['content'] = user_message
+
+register_template(
+    QwenTemplateMeta(
+        LLMTemplateType.custom_qwen3_reranker,
+        default_system=qwen3_reranker_system,
+        response_prefix='<think>\n\n</think>\n\n',
+        template_cls=CustomQwen3RerankerTemplate))
+
+
 register_template(Qwen2_5MathTemplateMeta(LLMTemplateType.qwen2_5_math))
 
 

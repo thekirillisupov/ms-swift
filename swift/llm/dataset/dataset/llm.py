@@ -419,6 +419,16 @@ register_dataset(
 
 register_dataset(
     DatasetMeta(
+        ms_dataset_id='/home/jovyan/isupov/reranker/data/universal_retrieval/list_wise_samples_v2_15_07_25',
+        hf_dataset_id='/home/jovyan/isupov/reranker/data/universal_retrieval/list_wise_samples_v2_15_07_25',
+        dataset_path='/home/jovyan/isupov/reranker/data/universal_retrieval/list_wise_samples_v2_15_07_25.json',
+        dataset_name='list_wise_samples_v2_15_07_25',
+        split=['train'],
+        preprocess_func=MTEBRerankPreprocessor(),
+        tags=['rerank', '🔥']))
+
+register_dataset(
+    DatasetMeta(
         ms_dataset_id='/home/jovyan/isupov/reranker/data/universal_retrieval/list_wise_samples_v3_5_08_25',
         hf_dataset_id='/home/jovyan/isupov/reranker/data/universal_retrieval/list_wise_samples_v3_5_08_25',
         dataset_path='/home/jovyan/isupov/reranker/data/universal_retrieval/list_wise_samples_v3_5_08_25.json',
